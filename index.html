@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="tr">
 <head>
   <!-- ne bakıyon ulen -->
@@ -15,6 +15,7 @@
     <link rel="canonical" href="https://example.com">
     <link href="bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="all.min.css">
+   <link rel="icon" href="favicon.ico">
     <style>
         /* Genel Stil Ayarları */
         body {
@@ -45,15 +46,18 @@
         }
 
         /* Hero Bölümü */
-        .hero {
-            background: linear-gradient(135deg, #333333, #1e1e1e);
-            color: #ffffff;
-            text-align: center;
-            padding: 10rem 2rem;
-            border-bottom: 1px solid #444444;
-            position: relative;
-            overflow: hidden;
-        }
+
+           .hero {
+                background: url('bg.png') no-repeat center center; /* Arka plan resmi ekliyoruz */
+                background-size: cover; /* Arka planın tüm bölümü kaplaması için */
+                color: #ffffff;
+                text-align: center;
+                padding: 10rem 2rem;
+                border-bottom: 1px solid #444444;
+                position: relative;
+                overflow: hidden;
+                 }
+
         .hero h1 {
             font-size: 3.5rem;
             margin-bottom: 1rem;
@@ -143,49 +147,38 @@
         }
 
         /* Geliştirici Ekip Bölümü */
-        .team {
-            padding: 5rem 2rem;
-            background-color: #1e1e1e;
-            text-align: center;
-        }
-        .team h2 {
-            font-size: 2.5rem;
-            margin-bottom: 2rem;
-            font-weight: 700;
-        }
-        .team-member {
-            background-color: #2c2c2c;
-            border-radius: 10px;
-            padding: 2rem;
-            margin: 1rem auto;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
-            color: #ffffff;
-            display: inline-block;
-            width: 250px;
-            text-align: center;
-        }
-        .team-member img {
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
-            border-radius: 50%;
-            margin: 0 auto 1rem;
-            display: block;
-        }
-        .team-member p {
-            margin: 0.5rem 0;
-        }
 
-        /* Footer */
-        footer {
-            background-color: #1e1e1e;
-            color: #e0e0e0;
-            text-align: center;
-            padding: 1rem 0;
-        }
-        footer p {
-            font-size: 0.9rem;
-        }
+ .team {
+        padding: 5rem 2rem;
+        background-color: #1e1e1e;
+        text-align: center;
+    }
+    .team h2 {
+        font-size: 2.5rem;
+        margin-bottom: 2rem; /* Başlık ile ekip üyeleri arasındaki mesafeyi artırır */
+        font-weight: 700;
+    }
+    .team-container {
+        display: flex;
+        justify-content: center; /* Üyeleri yatayda ortalar */
+        gap: 1rem; /* Üyeler arasına boşluk ekler */
+    }
+    .team-member {
+        background-color: #2c2c2c;
+        border-radius: 10px;
+        padding: 2rem;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+        color: #ffffff;
+        width: 250px;
+        text-align: center;
+    }
+    .team-member img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 50%;
+        margin-bottom: 1rem;
+    }
 
         /* Diğer Stil Ayarları */
         .extraBoldText {
@@ -269,25 +262,33 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
+         <div class="col-md-4">
                 <div class="feature-item">
-                    <i class="fas fa-check tick-icon"></i>
-                    <p class="extraBoldText">Son Derece Kararlı</p>
-                    <p class="smallText">Kararlı performans ve güvenilirlik sağlar.</p>
-                </div>
+                    <div class="feature-description">
+                        <i class="fas fa-check tick-icon"></i>
+                        <p class="extraBoldText">Son Derece Kararlı</p>
+                        <p class="smallText">Kararlı performans ve yüksek güvenilirlik sağlar.</p>
+                    </div>
             </div>
         </div>
     </section>
 
-    <!-- Team Section -->
-    <section id="team" class="team">
-        <h2 class="blackText mb-4">Geliştirici Ekip</h2>
+<section id="team" class="team">
+    <h2 class="blackText mb-4">Geliştirici Ekip</h2>
+    <div class="team-container">
         <div class="team-member">
             <img src="bekir.webp" alt="Bekir">
             <p class="extraBoldText">Bekir</p>
             <p>Proje Sahibi &amp; Geliştirici</p>
         </div>
-    </section>
+        <div class="team-member">
+            <img src="dogu.webp" alt="Doğu">
+            <p class="extraBoldText">Doğu</p>
+            <p>Çevirmen &amp; Fikir Babası</p>
+        </div>
+    </div>
+</section>
+
 
     <!-- Footer -->
     <footer>
