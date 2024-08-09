@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BrowOs, modern ve kararlı bir işletim sistemi sunar. Arch Linux tabanlıdır, Mozilla Firefox ile desteklenir ve yüksek performans sağlar.">
+    <meta name="keywords" content="BrowOs, işletim sistemi, Arch Linux, Mozilla Firefox, modern, kararlı">
+    <meta property="og:title" content="BrowOs - Modern ve Şık İşletim Sistemi">
+    <meta property="og:description" content="BrowOs, modern ve kararlı bir işletim sistemi sunar. Arch Linux tabanlıdır, Mozilla Firefox ile desteklenir ve yüksek performans sağlar.">
+    <meta property="og:image" content="https://example.com/path/to/your/image.jpg">
+    <meta property="og:url" content="https://example.com">
+    <meta property="og:type" content="website">
+    <title>BrowOs - Modern ve Şık İşletim Sistemi</title>
+    <link rel="canonical" href="https://example.com">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Genel Stil Ayarları */
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: #1e1e1e;
+            padding: 1rem 2rem;
+        }
+        .navbar-brand {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #ffffff;
+        }
+        .navbar-nav .nav-link {
+            color: #ffffff;
+            margin-left: 1rem;
+            font-size: 1.1rem;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #ff9800;
+        }
+
+        /* Hero Bölümü */
+        .hero {
+            background: linear-gradient(135deg, #333333, #1e1e1e);
+            color: #ffffff;
+            text-align: center;
+            padding: 10rem 2rem;
+            border-bottom: 1px solid #444444;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            animation: fadeInUp 2s ease-out;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            animation: fadeInUp 2s ease-out 0.5s;
+        }
+        .btn-custom {
+            background-color: #ff9800;
+            color: #ffffff;
+            padding: 0.75rem 2rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            transition: background-color 0.3s;
+            animation: fadeInUp 2s ease-out 1s;
+        }
+        .btn-custom:hover {
+            background-color: #e68900;
+        }
+
+        /* Animasyonlar */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Özellikler Bölümü */
+        .features {
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+        .features h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            font-weight: 700;
+        }
+        .feature-item {
+            background-color: #2c2c2c;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+        .feature-item:hover {
+            transform: translateY(-10px);
+        }
+        .feature-item img {
+            height: 80px;
+            margin-bottom: 1rem;
+            display: block;
+            margin: 0 auto;
+        }
+        .feature-item p {
+            font-size: 1rem;
+            margin-top: 1rem; /* Top Margin Increased */
+        }
+        .tick-icon {
+            color: #76ff03;
+            font-size: 40px;
+            margin-bottom: 1rem;
+        }
+        .feature-description {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        .feature-description img {
+            height: 50px;
+            margin-bottom: 0.5rem;
+        }
+        .feature-description .text {
+            display: inline-block;
+        }
+
+        /* Geliştirici Ekip Bölümü */
+        .team {
+            padding: 5rem 2rem;
+            background-color: #1e1e1e;
+            text-align: center;
+        }
+        .team h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            font-weight: 700;
+        }
+        .team-member {
+            background-color: #2c2c2c;
+            border-radius: 10px;
+            padding: 2rem;
+            margin: 1rem auto;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+            color: #ffffff;
+            display: inline-block;
+            width: 250px;
+            text-align: center;
+        }
+        .team-member img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin: 0 auto 1rem;
+            display: block;
+        }
+        .team-member p {
+            margin: 0.5rem 0;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1e1e1e;
+            color: #e0e0e0;
+            text-align: center;
+            padding: 1rem 0;
+        }
+        footer p {
+            font-size: 0.9rem;
+        }
+
+        /* Diğer Stil Ayarları */
+        .extraBoldText {
+            font-weight: 900;
+        }
+        .boldText {
+            font-weight: 700;
+        }
+        .smallText {
+            font-weight: 400;
+        }
+        .blackText {
+            font-weight: 900;
+            font-size: 2.5rem;
+        }
+        .gradientColor {
+            background: linear-gradient(90deg, #ff9800, #ff5722);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gradientUnderline {
+            background: linear-gradient(90deg, #ff9800, #ff5722);
+            background-clip: text;
+            color: transparent;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">BrowOs</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#home">Ana Sayfa</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#features">Özellikler</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#team">Geliştirici Ekip</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#download">İndir</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <h1 class="blackText mb-4">Modern ve Kararlı Bir İşletim Sistemi <span class="gradientColor">BrowOs</span></h1>
+        <p class="extraBoldText">Yüksek performans ve güvenilirlik sunar.</p>
+        <a href="#download" class="btn-custom">Son Kararlı Sürümü İndir</a>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <h2 class="blackText mb-4">Özellikler</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="feature-item">
+                    <div class="feature-description">
+                        <img src="https://sources.archlinux.org/other/artwork/archlinux-logo-light-90dpi.png" alt="Arch Linux">
+                        <p class="extraBoldText">Arch Linux Tabanlı</p>
+                        <p class="smallText">BrowOs, Arch Linux ile desteklenir ve yüksek performans sunar.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-item">
+                    <div class="feature-description">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Firefox_logo%2C_2019.svg/800px-Firefox_logo%2C_2019.svg.png" alt="Mozilla Firefox">
+                        <p class="extraBoldText">Mozilla Firefox Destekli</p>
+                        <p class="smallText">Mozilla Firefox ile en iyi web deneyimini yaşayın.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-item">
+                    <i class="fas fa-check tick-icon"></i>
+                    <p class="extraBoldText">Son Derece Kararlı</p>
+                    <p class="smallText">Kararlı performans ve güvenilirlik sağlar.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="team">
+        <h2 class="blackText mb-4">Geliştirici Ekip</h2>
+        <div class="team-member">
+            <img src="bekir.png" alt="Bekir">
+            <p class="extraBoldText">Bekir</p>
+            <p>Proje Sahibi &amp; Geliştirici</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 BrowOs. Tüm Hakları Saklıdır.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
